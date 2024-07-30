@@ -308,10 +308,10 @@ At Nuwara Travels, we believe in not just offering a service but creating an imm
       </div>
 
       <!-- signup -->
-      @include('includes.signup')
+      @livewire('register')
       <!-- //signu -->
       <!-- signin -->
-      @include('includes.signin')
+      @livewire('login')
       <!-- //signin -->
       <div class="col-sm-12 col-md-4">
         <h4>Address:</h4>
