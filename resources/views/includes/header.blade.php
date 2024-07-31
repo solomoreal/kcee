@@ -4,7 +4,7 @@
  			<div class="container">
  				<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
  					<li class="hm"><a href="index.php"><i class="fa fa-home"></i></a></li>
- 					<li class="prnt"><a href="profile.php">My Profile</a></li>
+ 					<li class="prnt"><a href="{{route('dashboard')}}">My Profile</a></li>
  					<li class="prnt"><a href="change_password.php">Change Password</a></li>
  					<li class="prnt"><a href="tour_history.php">My Tour History</a></li>
  				</ul>
