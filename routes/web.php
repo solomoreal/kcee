@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Livewire\Admin\ManagePermissions;
 
 Route::view('/', 'welcome')->name('home');
 
@@ -23,6 +24,8 @@ Route::view('profile', 'profile')
             Route::get('/dashboard', function () {
                 return view('admin.dashboard');
             })->name('admin.dashboard');
+            Route::get('/admin/permissions', ManagePermissions::class)->name('admin.permissions');
+
         });
     });
 
