@@ -3,7 +3,7 @@
  		<div class="top-header">
  			<div class="container">
  				<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
- 					<li class="hm"><a href="index.php"><i class="fa fa-home"></i></a></li>
+ 					<li class="hm"><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
  					<li class="prnt"><a href="{{route('dashboard')}}">My Profile</a></li>
  					<li class="prnt"><a href="change_password.php">Change Password</a></li>
  					<li class="prnt"><a href="tour_history.php">My Tour History</a></li>
@@ -11,7 +11,7 @@
  				<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
  					<li class="tol">Welcome :</li>
  					<li class="sig">{{auth()->user()->name}}</li>
- 					<li class="sigi"><a href="logout.php" >/ Logout</a></li>
+ 					<li class="sigi"><a href="{{route('logout')}}" >/ Logout</a></li>
  				</ul>
  				<div class="clearfix"></div>
  			</div>
@@ -21,7 +21,7 @@
  		<div class="top-header">
  			<div class="container">
  				<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
- 					<li class="hm"><a href="admin/index.php">Admin Login</a></li>
+ 					<li class="hm"><a href="{{route('admin.login')}}">Admin Login</a></li>
  				</ul>
  				<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
  					<li class="tol">Toll Number : 123-4568790</li>

@@ -47,7 +47,7 @@
     <div id="#top"></div>
     <section id="home">
       <div class="banner-container" style="height: 300px;">
-        <!-- <img src="images/banner-bg.jpg" alt="banner" /> -->
+        <img src="images/banner-bg.jpg" alt="banner" />
         <div class="container banner-content">
           <div id="da-slider" class="da-slider">
             <div>&nbsp;</div>
@@ -67,41 +67,12 @@
         <div class="heading text-center">
           <!-- Heading -->
           <h2>User Profile</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p>You Can Update Your Details Here</p>
         </div>
         <div class="privacy">
           <div class="container">
             <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">User Profile</h3>
-            <form name="chngpwd" method="post">
-
-                  <p style="width: 350px;">
-
-                    <b>Name</b>  <input type="text" name="name" value="" class="form-control" id="name" required="">
-                  </p>
-
-                  <p style="width: 350px;">
-                    <b>Mobile Number</b>
-                    <input type="text" class="form-control" name="mobileno" maxlength="10" value="" id="mobileno"  required="">
-                  </p>
-
-                  <p style="width: 350px;">
-                    <b>Email Id</b>
-                    <input type="email" class="form-control" name="email" value="" id="email" >
-                  </p>
-                  <p style="width: 350px;">
-                    <b>Last Updation Date : </b>
-
-                  </p>
-
-                  <p style="width: 350px;">
-                    <b>Reg Date :</b>
-
-                  </p>
-
-              <p style="width: 350px;">
-                <button type="submit" name="submit6" class="btn-primary btn">Update</button>
-              </p>
-            </form>
+            @livewire('profile')
           </div>
           <div class="container">
             <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">Recommended Destinations</h3>
