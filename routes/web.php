@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Middleware\AdminMiddleware;
-use App\Livewire\Admin\ManagePermissions;
+use App\Http\Controllers\Admin\DashboardController;
 
 Route::view('/', 'welcome')->name('home');
 
@@ -21,10 +21,8 @@ Route::view('profile', 'profile')
         Route::post('/logout', [LoginController::class, 'logout'])->name('admin.logout');
 
         Route::middleware([AdminMiddleware::class])->group(function () {
-            Route::get('/dashboard', function () {
-                return view('admin.dashboard');
-            })->name('admin.dashboard');
-            Route::get('/admin/permissions', ManagePermissions::class)->name('admin.permissions');
+            Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+            Route::get('/permissions', [DashboardController::class, 'permissions'])->name('admin.permissions');
 
         });
     });

@@ -1,13 +1,11 @@
-@extends('admin.layouts.dashboard')
-@section('content')
-<div class="container mt-5">
-    @if (session()->has('message'))
-        <div class="alert alert-success">
-            {{ session('message') }}
-        </div>
-    @endif
+<div>
 
     <form wire:submit.prevent="addPermission" class="mb-4">
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
         <div class="form-group">
             <label for="adminId">Admin</label>
             <select id="adminId" wire:model="adminId" class="form-control">
@@ -53,4 +51,4 @@
         </tbody>
     </table>
 </div>
-@endsection
+

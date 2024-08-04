@@ -10,8 +10,8 @@ class ManagePermissions extends Component
 {
     public $permissions;
     public $adminId;
-    public $create;
-    public $update;
+    public $create = false;
+    public $update = false;
 
     public function mount()
     {
@@ -26,13 +26,15 @@ class ManagePermissions extends Component
             'update' => 'required|boolean',
         ]);
 
-        Permission::create([
-            'admin_id' => $this->adminId,
-            'create' => $this->create,
-            'update' => $this->update,
-        ]);
+        Permission::updateOrCreate(
+            ['admin_id' => $this->adminId],
+            [
+                'create' => $this->create,
+                'update' => $this->update,
+            ]
+        );
 
-        session()->flash('message', 'Permission added successfully.');
+        session()->flash('message', 'Permission added/updated successfully.');
         $this->permissions = Permission::all();
     }
 
