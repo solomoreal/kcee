@@ -1,13 +1,13 @@
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('home')}}">
     <div class="sidebar-brand-icon">
-      <img src="img/logo/logo.png">
+      <img src="{{asset('img/logo/logo.png')}}">
     </div>
-    <div class="sidebar-brand-text mx-3" href="..\index.php" >Nuwara Travels</div>
+    <div class="sidebar-brand-text mx-3" href="{{route('home')}}" >Nuwara Travels</div>
   </a>
   <hr class="sidebar-divider my-0">
   <li class="nav-item active">
-    <a class="nav-link" href="dashboard.php">
+    <a class="nav-link" href="{{route('admin.dashboard')}}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
     </li>
@@ -24,15 +24,20 @@
     <div id="packageForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
         <h6 class="collapse-header">Packages</h6>
-        <a class="collapse-item" href="create_package.php">Create Package</a>
-        <a class="collapse-item" href="manage_packages.php">manage packages</a>
+        <a class="collapse-item" href="{{route('admin.package')}}">Manage Packages</a>
       </div>
     </div>
   </li>
    <li class="nav-item">
-    <a class="nav-link" href="manage_bookings.php">
+    <a class="nav-link" href="{{route('admin.bookings')}}">
       <i class="fas fa-fw fa-chart-area"></i>
       <span>Bookings</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{route('admin.manage_tour_guide')}}">
+      <i class="fas fa-fw fa-chart-area"></i>
+      <span>Tour Guides</span>
     </a>
   </li>
   <li class="nav-item">

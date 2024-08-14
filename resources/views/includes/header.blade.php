@@ -20,8 +20,9 @@
     @guest
  		<div class="top-header">
  			<div class="container">
+
  				<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
- 					<li class="hm"><a href="{{route('admin.login')}}">Admin Login</a></li>
+ 					<li class="hm"><a href="{{route('admin.login')}}">@auth('admin') Dashboard @else Admin Login @endauth</a></li>
  				</ul>
  				<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
  					<li class="tol">Toll Number : 123-4568790</li>

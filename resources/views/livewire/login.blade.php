@@ -1,5 +1,5 @@
 
-<div class="modal wire:submit="login" fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal" wire:submit="login" fade id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content modal-info">
 			<div class="modal-header">

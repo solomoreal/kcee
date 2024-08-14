@@ -9,7 +9,7 @@ Route::middleware('guest')->group(function () {
     Volt::route('register', 'pages.auth.register')
         ->name('register');
 
-    Volt::route('login', 'pages.auth.login')
+    Volt::route('login', 'livewire.login')
         ->name('login');
 
     Volt::route('forgot-password', 'pages.auth.forgot-password')
@@ -33,6 +33,6 @@ Route::middleware('auth')->group(function () {
         Route::get('\logout', function(Logout $logout){
             $logout();
 
-            return redirect('home')->route('home');
+            return redirect('/');
         })->name('logout');
 });
