@@ -5,8 +5,10 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TourGuideController;
+use App\Http\Controllers\IndexController;
 
-Route::view('/', 'welcome')->name('home');
+Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/package/{id}', [IndexController::class, 'tourPackageDetails'])->name('package.details');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

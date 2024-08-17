@@ -95,23 +95,28 @@ At Nuwara Travels, we believe in not just offering a service but creating an imm
     </div>
     <div class="">
       <h3>Package List</h3>
-
-          <div class="rom-btm">
+        @forelse ($packages as $package)
+        <div class="rom-btm">
             <div class="col-md-3 room-left wow fadeInLeft animated" data-wow-delay=".5s">
-              <img src="admin/pacakgeimages/" class="img-responsive" alt="">
+              <img src="{{ asset('storage/' . $package->image) }}" class="img-responsive" alt="">
             </div>
             <div class="col-md-6 room-midle wow fadeInUp animated" data-wow-delay=".5s">
-              <h4>Package Name: </h4>
-              <h6>Package Type :  </h6>
-              <p><b>-Location :</b> </p>
-              <p><b>Features</b> </p>
+              <h4>Package Name: {{$package->name}}</h4>
+              <h6>Package Type :  {{$package->type}}</h6>
+              <p><b>-Location :</b>{{$package->location}} </p>
+              <p><b>Features</b> {{$package->features}}</p>
             </div>
             <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
-              <h5>LKR </h5>
-              <a href="package_details.php?pkgid=" class="view">Details</a>
+              <h5>NGN {{$package->price}}</h5>
+              <a href="{{route('package.details', ['id' => $package->id])}}" class="view">Details</a>
             </div>
             <div class="clearfix"></div>
           </div>
+        @empty
+
+        @endforelse
+
+
     </div>
     <div class="clearfix"></div>
   </div>
@@ -332,16 +337,4 @@ At Nuwara Travels, we believe in not just offering a service but creating an imm
 </section>
 @include('includes.footer')
 
-<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
-<script src="js/modernizr-latest.js"></script>
-<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
-<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-<script src="js/jquery.nav.js" type="text/javascript"></script>
-<script src="js/jquery.cslider.js" type="text/javascript"></script>
-<script src="contact/contact_me.js"></script>
-<script src="js/custom.js" type="text/javascript"></script>
-<script src="js/owl-carousel/owl.carousel.js"></script>
-</body>
-</html>
+

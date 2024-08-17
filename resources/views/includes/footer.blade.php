@@ -23,3 +23,17 @@
       <!-- / .row -->
     </div>
   </section>
+
+  <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a>
+<script src="{{asset('js/modernizr-latest.js')}}"></script>
+<script src="{{asset('js/jquery-1.8.2.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jquery.isotope.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/fancybox/jquery.fancybox.pack.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jquery.nav.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/jquery.cslider.js')}}" type="text/javascript"></script>
+<script src="{{asset('contact/contact_me.js')}}"></script>
+<script src="{{asset('js/custom.js')}}" type="text/javascript"></script>
+<script src="{{asset('js/owl-carousel/owl.carousel.js')}}"></script>
+</body>
+</html>
