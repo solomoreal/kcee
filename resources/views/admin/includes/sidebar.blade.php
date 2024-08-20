@@ -60,10 +60,5 @@
       </div>
     </div>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../rooms/index.php">
-      <i class="fas fa-fw fa-chart-area"></i>
-      <span>Room Booking</span>
-    </a>
-  </li>
+
 </ul>

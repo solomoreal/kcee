@@ -33,40 +33,11 @@
 
 <body>
  @include('includes.header')
- <!--/.header-->
- <div id="#top"></div>
-    <section id="home">
-        <div class="banner-container" style="height: 300px;">
-            <!-- <img src="images/banner-bg.jpg" alt="banner" /> -->
-            <div class="container banner-content">
-            <video autoplay muted loop>
-            <source src="{{asset('images/travel.mp4')}}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-            </div>
-        </div>
-    </section>
+ @livewire('booking-history')
+ @livewire('register')
 
-    <section id="packages" class="secPad">
-        <div class="container">
-            <div class="heading text-center">
-                <h2>Package Details</h2>
-                <p>Mention Your Requirements in comment Section</p>
-            </div>
-            <div class="selectroom">
-                @livewire('package-booking', ['package' => $package])
+ @livewire('login')
+ <!-- //signin -->
 
-            </div>
-        </div>
-    </section>
-      @livewire('register')
-      <!-- //signu -->
-      <!-- signin -->
-      @livewire('login')
-      <!-- //signin -->
-
-  <!--/.container-->
-</section>
+<!--/.container-->
 @include('includes.footer')
-
-

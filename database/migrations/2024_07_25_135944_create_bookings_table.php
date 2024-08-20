@@ -19,7 +19,7 @@ return new class extends Migration
             $table->dateTime('end_at');
             $table->text('comment')->nullable();
             $table->string('status')->default('pending');
-            $table->integer('attended_by');
+            $table->integer('attended_by')->nullable();
             $table->timestamps();
         });
     }

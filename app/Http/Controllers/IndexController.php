@@ -17,4 +17,14 @@ class IndexController extends Controller
         return view('package-details', compact('package'));
     }
 
+    public function bookingHistory()
+    {
+        return view('booking-history');
+    }
+
+    public function changePassword()
+    {
+        return view('change-password');
+    }
+
 }

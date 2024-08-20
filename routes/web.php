@@ -13,7 +13,8 @@ Route::get('/package/{id}', [IndexController::class, 'tourPackageDetails'])->nam
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
-
+Route::get('/booking-history', [IndexController::class,'bookingHistory'])->middleware(['auth'])->name('booking-history');
+Route::get('/change-password', [IndexController::class,'changePassword'])->middleware(['auth'])->name('change-password');
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');

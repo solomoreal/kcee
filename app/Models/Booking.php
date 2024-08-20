@@ -25,4 +25,9 @@ class Booking extends Model
                     ->withPivot('attended_by', 'status')
                     ->withTimestamps();
     }
+
+    public function tourPackage()
+    {
+        return $this->belongsTo(TourPackage::class, 'package_id');
+    }
 }

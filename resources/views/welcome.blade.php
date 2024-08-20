@@ -46,7 +46,7 @@
 <section id="introText">
   <div class="container">
     <div class="text-center adeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-      <h1>Nuwara Travels Gives You a Great Holiday Package</h1>
+      <h1>KCee Travels Gives You a Great Holiday Package</h1>
       <p>Find Your Perfect Escape: Tailored Packages for Every Adventurer! Explore, Discover, and Create Unforgettable Memories with Our Exclusive Travel Experiences. Your Ideal Journey Awaits – Choose Your Package Today!</p>
     </div>
   </div>
@@ -58,7 +58,7 @@
     <div class="heading text-center adeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
       <!-- Heading -->
       <h2>🌿About Us</h2>
-      <p>Discover Nuwara Eliya's allure with Nuwara Travels, a premier agency offering cab rentals, logistics, guides, and hotel reservations. While our commitment to personalized service is unwavering, we're transitioning to a tech-driven system to enhance efficiency and ensure a seamless travel experience. Join us on a journey where technology meets tranquility. 🚗🌐 #NuwaraTravels #EffortlessExploration</p>
+      <p>Discover Kcee Eliya's allure with Kcee Travels, a premier agency offering cab rentals, logistics, guides, and hotel reservations. While our commitment to personalized service is unwavering, we're transitioning to a tech-driven system to enhance efficiency and ensure a seamless travel experience. Join us on a journey where technology meets tranquility. 🚗🌐 #NuwaraTravels #EffortlessExploration</p>
     </div>
     <div class="row adeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
       <div class="col-md-4">
@@ -66,18 +66,18 @@
       </div>
       <div class="col-md-8">
         <p>🚗 Our Services:
-At Nuwara Travels, we specialize in providing a seamless travel experience. From cab rentals to transportation logistics, tour guiding, and hotel reservations, our range of services is designed to make your journey through Nuwara Eliya and beyond truly unforgettable.
+At Kcee Travels, we specialize in providing a seamless travel experience. From cab rentals to transportation logistics, tour guiding, and hotel reservations, our range of services is designed to make your journey through Kcee Eliya and beyond truly unforgettable.
 </p><p>
 🌐 Comprehensive Travel Packages:
-Dive into the beauty of the island with our carefully curated travel packages. We ensure not only your exploration of Sri Lanka's wonders but also guarantee comfortable accommodations and expert guidance throughout your journey.
+Dive into the beauty of the island with our carefully curated travel packages. We ensure not only your exploration of Nigeria's wonders but also guarantee comfortable accommodations and expert guidance throughout your journey.
 </p><p>
 📜 The Challenge:
-Presently, Nuwara Travels relies on manual record-keeping for their bookings. While our commitment to personalized service remains unwavering, the manual system has proven to be inefficient. Managing information about travelers, bookings, hotels, vehicles, and tourist attractions through handwritten registers is time-consuming and often prone to errors.
+Presently, Kcee Travels relies on manual record-keeping for their bookings. While our commitment to personalized service remains unwavering, the manual system has proven to be inefficient. Managing information about travelers, bookings, hotels, vehicles, and tourist attractions through handwritten registers is time-consuming and often prone to errors.
 </p><p>
-🔍 The Nuwara Travels Difference:
+🔍 The Kcee Travels Difference:
 We understand the need for a streamlined approach. Our dedicated team is committed to enhancing your experience by transitioning to a more efficient and technologically advanced booking system. This shift aims to eliminate inefficiencies, reduce manual errors, and provide you with an even more seamless and enjoyable travel experience.
 </p><p>
-At Nuwara Travels, we believe in not just offering a service but creating an immersive and hassle-free journey for every traveler. Join us as we embark on this technological transformation, ensuring that your exploration of Nuwara Eliya and beyond is as smooth as the gentle breeze that graces our picturesque landscapes. 🌺🌍 #NuwaraTravels #ExploreWithEase</p>
+At Kcee Travels, we believe in not just offering a service but creating an immersive and hassle-free journey for every traveler. Join us as we embark on this technological transformation, ensuring that your exploration of Kcee Eliya and beyond is as smooth as the gentle breeze that graces our picturesque landscapes. 🌺🌍 #NuwaraTravels #ExploreWithEase</p>
 
       </div>
     </div>
@@ -137,7 +137,7 @@ At Nuwara Travels, we believe in not just offering a service but creating an imm
     <div class="heading text-center">
       <!-- Heading -->
       <h2>Gallery</h2>
-      <p>🌴 Behold the stunning snapshots of our Sri Lankan travel gems! Explore the beauty through these captivating images. 🌅</p>
+      <p>🌴 Behold the stunning snapshots of our Nigerian travel gems! Explore the beauty through these captivating images. 🌅</p>
     </div>
     <div class="row">
       <div class="col-md-12">
@@ -321,9 +321,9 @@ At Nuwara Travels, we believe in not just offering a service but creating an imm
       <div class="col-sm-12 col-md-4">
         <h4>Address:</h4>
         <address>
-          Nuwara Travels<br>
+          Kcee Travels<br>
           12th, Main street<br>
-          Nuwara Eliya, Sri Lanka.
+          Kcee Eliya, Nigeria.
           <br>
         </address>
         <h4>Phone:</h4>

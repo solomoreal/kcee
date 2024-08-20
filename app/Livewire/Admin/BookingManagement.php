@@ -17,6 +17,7 @@ class BookingManagement extends Component
         $booking = Booking::find($bookingId);
         if ($booking) {
             $booking->status = 'approved';
+            $booking->attended_by = auth()->guard('admin')->user()->id;
             $booking->save();
 
             session()->flash('message', 'Booking approved successfully.');
@@ -28,6 +29,7 @@ class BookingManagement extends Component
         $booking = Booking::find($bookingId);
         if ($booking) {
             $booking->status = 'declined';
+            $booking->attended_by = auth()->guard('admin')->user()->id;
             $booking->save();
 
             session()->flash('message', 'Booking declined successfully.');
@@ -36,8 +38,8 @@ class BookingManagement extends Component
 
     public function render()
     {
-        $bookings = Booking::with(['tourPackage', 'tourGuides'])
-            ->paginate($this->perPage);
+        $bookings = Booking::with(['tourGuides'])
+        ->paginate($this->perPage);
 
         return view('livewire.admin.booking-management', [
             'bookings' => $bookings,

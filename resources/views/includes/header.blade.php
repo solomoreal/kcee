@@ -5,8 +5,8 @@
  				<ul class="tp-hd-lft wow fadeInLeft animated" data-wow-delay=".5s">
  					<li class="hm"><a href="{{route('home')}}"><i class="fa fa-home"></i></a></li>
  					<li class="prnt"><a href="{{route('dashboard')}}">My Profile</a></li>
- 					<li class="prnt"><a href="change_password.php">Change Password</a></li>
- 					<li class="prnt"><a href="tour_history.php">My Tour History</a></li>
+ 					<li class="prnt"><a href="{{route('change-password')}}">Change Password</a></li>
+ 					<li class="prnt"><a href="{{route('booking-history')}}">My Tour History</a></li>
  				</ul>
  				<ul class="tp-hd-rgt wow fadeInRight animated" data-wow-delay=".5s">
  					<li class="tol">Welcome :</li>
@@ -48,13 +48,12 @@
  			<!--/.navbar-header-->
  			<div id="main-nav" class="collapse navbar-collapse adeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
  				<ul class="nav navbar-nav" id="mainNav">
- 					<li ><a href="#home" class="scroll-link">Home</a></li>
- 					<li><a href="#aboutUs" class="scroll-link">About Us</a></li>
- 					<li><a href="#packages" class="scroll-link">Packages</a></li>
- 					<li><a href="#portfolio" class="scroll-link">Gallery</a></li>
- 					<li><a href="tourguide.php" class="scroll-link">Tour Guide</a></li>
- 					<li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
-					<li><a href="rooms/index2.php?reservation2" class="scroll-link">Room Booking</a></li>
+ 					<li ><a href="{{route('home')}}#home" class="scroll-link">Home</a></li>
+ 					<li><a href="{{route('home')}}#aboutUs" class="scroll-link">About Us</a></li>
+ 					<li><a href="{{route('home')}}#packages" class="scroll-link">Packages</a></li>
+ 					<li><a href="{{route('home')}}#portfolio" class="scroll-link">Gallery</a></li>
+ 					<li><a href="{{route('home')}}#contactUs" class="scroll-link">Contact Us</a></li>
+
  				</ul>
  			</div>
  			<!--/.navbar-collapse-->

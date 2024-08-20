@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer('tour_guide_id');
             $table->integer('booking_id');
-            $table->integer('attended_by');
+            $table->integer('attended_by')->nullable();
             $table->boolean('status')->default(false);
             $table->timestamps();
         });
