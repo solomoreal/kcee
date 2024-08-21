@@ -10,31 +10,38 @@
           <h3 class="wow fadeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">My Tour History</h3>
 
             <p>
-              <table class="table align-items-center table-flush table-hover table-bordered" width="100%">
-                <tr align="center">
-                  <th>#</th>
-                  <th>Booking Id</th>
-                  <th>Package Name</th>
-                  <th>From</th>
-                  <th>To</th>
-                  <th>Comment</th>
-                  <th>Status</th>
-                  <th>Booking Date</th>
-                  <th>Action</th>
-                </tr>
-
+                <table class="table align-items-center table-flush table-hover table-bordered" width="100%">
                     <tr align="center">
-                      <td></td>
-                      <td>#BK</td>
-                      <td><a href="#"></a></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td>
-                        <td><a href="#" >Cancel</a></td>
+                        <th>#</th>
+                        <th>Booking Id</th>
+                        <th>Package Name</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Comment</th>
+                        <th>Status</th>
+                        <th>Booking Date</th>
+                        <th>Action</th>
                     </tr>
 
-              </table>
+                    @foreach($bookings as $index => $booking)
+                        <tr align="center">
+                            <td>{{ $index + 1 }}</td>
+                            <td>#BK{{ $booking->id }}</td>
+                            <td><a href="#">{{ $booking->tourPackage->name ?? 'N/A' }}</a></td>
+                            <td>{{ $booking->start_at->format('Y-m-d') }}</td>
+                            <td>{{ $booking->end_at->format('Y-m-d') }}</td>
+                            <td>{{ $booking->comment }}</td>
+                            <td>{{ $booking->status }}</td>
+                            <td>{{ $booking->created_at->format('Y-m-d') }}</td>
+                            <td>
+                                @if($booking->status !== 'Cancelled')
+                                    <a href="#" wire:click.prevent="cancelBooking({{ $booking->id }})">Cancel</a>
+                                @endif
+                            </td>
+                        </tr>
+                    @endforeach
+                </table>
+
             </p>
           </form>
         </div>

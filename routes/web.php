@@ -28,6 +28,8 @@ Route::view('profile', 'profile')
         Route::middleware([AdminMiddleware::class])->group(function () {
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
             Route::get('/permissions', [DashboardController::class, 'permissions'])->name('admin.permissions');
+            Route::get('/add', [DashboardController::class, 'addAdmin'])->name('admin.add');
+            Route::get('/manage-users', [DashboardController::class, 'manageUsers'])->name('admin.manage_users');
             Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
             Route::get('/tour-guide', [TourGuideController::class, 'manage'])->name('admin.manage_tour_guide');
             Route::get('/package', [TourGuideController::class, 'package'])->name('admin.package');

@@ -13,7 +13,7 @@ class Login extends Component
     /**
      * Handle an incoming authentication request.
      */
-    public function login(): void
+    public function login()
     {
         $this->validate();
 
@@ -21,9 +21,9 @@ class Login extends Component
 
         Session::regenerate();
 
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        return $this->redirectIntended(default: route('dashboard', absolute: false));
     }
-    
+
     public function render()
     {
         return view('livewire.login');

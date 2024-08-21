@@ -23,4 +23,13 @@ class DashboardController extends Controller
     public function permissions(){
         return view('admin.permissions');
     }
+
+    public function manageUsers()
+    {
+        return view('admin.manage-users');
+    }
+
+    public function addAdmin(){
+        return view('admin.add');
+    }
 }

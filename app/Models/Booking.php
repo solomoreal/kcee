@@ -19,6 +19,11 @@ class Booking extends Model
         'attended_by',
     ];
 
+    protected $casts = [
+        'start_at' => 'datetime',
+        'end_at' => 'datetime',
+    ];
+
     public function tourGuides()
     {
         return $this->belongsToMany(TourGuide::class, 'booking_tour_guides', 'booking_id', 'tour_guide_id')
