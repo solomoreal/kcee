@@ -18,7 +18,7 @@
             <div class="clearfix"></div>
             <div class="grand">
                 <p>Grand Total</p>
-                <h3>NGN {{$package->price}}</h3>
+                <h3>NGN {{!empty($selectedGuideDetails) ? $selectedGuideDetails[0]->price + $package->price : $package->price}}</h3>
             </div>
         </div>
         <h3>Package Details</h3>
@@ -46,31 +46,46 @@
                     </div>
                 </div>
 
-
                 <ul>
                     <li class="spe">
                         <label for="selectedGuides" class="inputLabel">Select Tour Guides</label>
-                        <select multiple id="selectedGuides" wire:model="selectedGuides" class="form-control">
+                        <select multiple id="selectedGuides" wire:model.live="selectedGuides" class="form-control">
                             @foreach($tourGuides as $guide)
                                 <option value="{{ $guide->id }}">{{ $guide->name }}</option>
                             @endforeach
                         </select>
                         @error('selectedGuides') <span class="text-danger">{{ $message }}</span> @enderror
+                    </li>
+
+                    @if($selectedGuideDetails)
+                        <li class="spe">
+                            <label class="inputLabel">Tour Guide Details</label>
+                            @foreach($selectedGuideDetails as $guide)
+                                <div class="card mt-2">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Name: {{ $guide->name }}</h5>
+                                        <p class="card-text">Details: {{ $guide->details }}</p>
+                                        <p class="card-text">Price: NGN{{ $guide->price }}</p>
+                                        <p class="card-text"><small class="text-muted">Features: {{ $guide->features }} </small></p>
+                                    </div>
+                                </div>
+                            @endforeach
                         </li>
+                    @endif
+
                     <li class="spe">
                         <label class="inputLabel">Comment</label>
-                        <textarea class="form-control" rows="4" name="comment" required=""></textarea>
+                        <textarea class="form-control" rows="4" name="comment" required="" wire:model="comment"></textarea>
                     </li>
+
                     @auth
                     <li class="spe" align="center">
                         <button type="submit" name="submit2" class="btn-primary btn">Book</button>
                     </li>
                     @else
-
                     <li align="center" style="margin-top: 1%">
                         <a href="#" data-toggle="modal" data-target="#myModal4" class="btn-primary btn">Book</a>
                     </li>
-
                     @endauth
 
                     <div class="clearfix"></div>
@@ -78,6 +93,7 @@
             </div>
         </div>
     </form>
+
     @auth
     <h4>Rate this Package</h4>
     <form wire:submit.prevent="rate">

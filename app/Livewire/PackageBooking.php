@@ -17,10 +17,17 @@ class PackageBooking extends Component
     public $comment;
     public $selectedGuides = [];
     public $rating;
+    public $selectedGuideDetails = [];
 
     public function mount($package)
     {
         $this->package = $package;
+    }
+
+    public function updatedSelectedGuides($selectedGuides)
+    {
+
+        $this->selectedGuideDetails = TourGuide::where('id', $selectedGuides)->get();
     }
 
     public function book()
@@ -68,6 +75,7 @@ class PackageBooking extends Component
 
         return view('livewire.package-booking', [
             'tourGuides' => $tourGuides,
+            'selectedGuideDetails' => $this->selectedGuideDetails,
         ]);
     }
 }

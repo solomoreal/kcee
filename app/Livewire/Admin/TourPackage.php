@@ -23,7 +23,7 @@ class TourPackage extends Component
             'price' => 'required|numeric',
             'features' => 'nullable|string',
             'details' => 'nullable|string',
-            'image' => 'required|image|max:1024', // Image validation
+            'image' => 'required|image', // Image validation
         ]);
 
         $imagePath = $this->image->store('tour-images', 'public'); // Store the image

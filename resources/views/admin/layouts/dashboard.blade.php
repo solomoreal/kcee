@@ -9,8 +9,12 @@
   <meta name="author" content="">
   <link href="{{asset('img/logo/logo.png')}}" rel="icon">
   <title>Admin - Tourism Management System</title>
+  {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
   <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
   <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet"/>
+    @livewireStyles
+
   <link href="{{asset('css/ruang-admin.min.css')}}" rel="stylesheet">
   <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet">
 </head>
@@ -52,7 +56,8 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-
+  {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script> --}}
+@livewireScripts
   <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
   <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>

@@ -6,14 +6,18 @@ use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TourGuideController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\ProfileController;
 
 Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/package/{id}', [IndexController::class, 'tourPackageDetails'])->name('package.details');
 
-Route::view('dashboard', 'dashboard')
+Route::get('/dashboard', [ProfileController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 Route::get('/booking-history', [IndexController::class,'bookingHistory'])->middleware(['auth'])->name('booking-history');
+Route::get('/flights', [IndexController::class,'flights'])->name('flights');
+Route::get('/hotels', [IndexController::class,'hotels'])->name('hotels');
+Route::get('/hotel-details/{id}', [IndexController::class,'hotelDetails'])->name('hotel-details');
 Route::get('/change-password', [IndexController::class,'changePassword'])->middleware(['auth'])->name('change-password');
 Route::view('profile', 'profile')
     ->middleware(['auth'])
@@ -29,6 +33,12 @@ Route::view('profile', 'profile')
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
             Route::get('/permissions', [DashboardController::class, 'permissions'])->name('admin.permissions');
             Route::get('/add', [DashboardController::class, 'addAdmin'])->name('admin.add');
+            Route::get('/manage-flight', [DashboardController::class, 'manageFlight'])->name('admin.manage-flight');
+            Route::get('/flights', [DashboardController::class, 'flightBooking'])->name('admin.flights');
+
+            Route::get('/room-bookings', [DashboardController::class, 'roomBooking'])->name('admin.room-booking');
+            Route::get('/room-details', [DashboardController::class, 'roomDetail'])->name('admin.room-detail');
+
             Route::get('/manage-users', [DashboardController::class, 'manageUsers'])->name('admin.manage_users');
             Route::get('/logout', [LoginController::class, 'logout'])->name('admin.logout');
             Route::get('/tour-guide', [TourGuideController::class, 'manage'])->name('admin.manage_tour_guide');

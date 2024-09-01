@@ -51,6 +51,8 @@
  					<li ><a href="{{route('home')}}#home" class="scroll-link">Home</a></li>
  					<li><a href="{{route('home')}}#aboutUs" class="scroll-link">About Us</a></li>
  					<li><a href="{{route('home')}}#packages" class="scroll-link">Packages</a></li>
+                     <li><a href="{{route('flights')}}" class="hm">Flight Booking</a></li>
+                     <li><a href="{{route('hotels')}}" class="scroll-link">Room Booking</a></li>
  					<li><a href="{{route('home')}}#portfolio" class="scroll-link">Gallery</a></li>
  					<li><a href="{{route('home')}}#contactUs" class="scroll-link">Contact Us</a></li>
 

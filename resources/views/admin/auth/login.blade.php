@@ -28,6 +28,7 @@
               <div class="col-lg-12">
                 <div class="login-form">
                   <div class="text-center">
+                    <h1 class="h4 text-gray-900 mb-4"><a href="{{route('home')}}"><i class="fa fa-home"></i></a></h1>
                     <h1 class="h4 text-gray-900 mb-4">Admin-Login</h1>
                   </div>
                   <form role="form" method="POST" action="{{ route('admin.login') }}" enctype="multipart/form-data" class="form-horizontal">

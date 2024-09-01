@@ -105,6 +105,7 @@ At Kcee Travels, we believe in not just offering a service but creating an immer
               <h6>Package Type :  {{$package->type}}</h6>
               <p><b>-Location :</b>{{$package->location}} </p>
               <p><b>Features</b> {{$package->features}}</p>
+              <p><b>Details</b> {{$package->details}}</p>
             </div>
             <div class="col-md-3 room-right wow fadeInRight animated" data-wow-delay=".5s">
               <h5>NGN {{$package->price}}</h5>

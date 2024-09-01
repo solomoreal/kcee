@@ -11,9 +11,9 @@
 						<div class="login-right">
 							<form method="post">
 								<h3>Signin with your account </h3>
-								<input type="text" name="email" wire:model="form.email" ype="email" required autofocus autocomplete="username" id="email" placeholder="Enter your Email" >
+								<input style="color: black" type="text" name="email" wire:model="form.email" ype="email" required autofocus autocomplete="username" id="email" placeholder="Enter your Email" >
                                 <x-input-error :messages="$errors->get('form.email')" class="mt-2" />
-								<input id="password" placeholder="Password" wire:model="form.password"
+								<input style="color: black" id="password" placeholder="Password" wire:model="form.password"
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password">

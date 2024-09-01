@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\TourPackage;
+use App\Models\HotelDetail;
 
 class IndexController extends Controller
 {
@@ -25,6 +26,23 @@ class IndexController extends Controller
     public function changePassword()
     {
         return view('change-password');
+    }
+
+    public function flights()
+    {
+        return view('flights');
+    }
+
+    public function hotels()
+    {
+        $hotels = HotelDetail::where('status', 'available')->get();
+        return view('hotels', compact('hotels'));
+    }
+
+    public function hoteldetails($id)
+    {
+        $hotel = HotelDetail::findOrFail($id);
+        return view('hotel-details', compact('hotel'));
     }
 
 }

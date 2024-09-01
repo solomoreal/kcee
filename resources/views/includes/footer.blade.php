@@ -17,7 +17,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 text-center adeInDown animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInDown;">
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> -  Nuwara Travels Srilanka
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> -  Kcee Travels Nigeria/Srilanka
         </div>
       </div>
       <!-- / .row -->

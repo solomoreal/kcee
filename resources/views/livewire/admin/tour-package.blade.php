@@ -55,15 +55,20 @@
 
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>
-                            <input type="file" wire:model="image" id="image" class="form-control">
+                            <input type="file" wire:model="image" id="image" class="form-control-file">
                             @if ($image)
                                 <img src="{{ $image->temporaryUrl() }}" class="img-thumbnail mt-3" alt="Image Preview" width="150">
                             @elseif($editMode && $selectedPackage->image)
                                 <img src="{{ asset('storage/' . $selectedPackage->image) }}" class="img-thumbnail mt-3" alt="Current Image" width="150">
                             @endif
                         </div>
-
-                        <button type="submit" class="btn btn-primary">{{ $editMode ? 'Update' : 'Create' }} Package</button>
+                        <div wire:loading class="row text-primary mx-auto">
+                            Processing...
+                        </div>
+                        @if (session()->has('message'))
+                            <div class="alert alert-success text-primary">{{ session('message') }}</div>
+                        @endif
+                        <button type="submit"  class="btn btn-primary">{{ $editMode ? 'Update' : 'Create' }} Package</button>
                     </form>
 
             <hr>
@@ -81,7 +86,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                     @forelse ($packages as $package)
                         <tr>
                             <td>{{ $package->name }}</td>

@@ -11,7 +11,8 @@ use App\Models\TourPackage;
 
 class DashboardController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $data['admins'] = Admin::count();
         $data['users'] = User::count();
         $data['bookings'] = Booking::count();
@@ -20,7 +21,8 @@ class DashboardController extends Controller
         return view('admin.dashboard')->with($data);
     }
 
-    public function permissions(){
+    public function permissions()
+    {
         return view('admin.permissions');
     }
 
@@ -31,5 +33,25 @@ class DashboardController extends Controller
 
     public function addAdmin(){
         return view('admin.add');
+    }
+
+    public function manageFlight()
+    {
+        return view('admin.flight-detail');
+    }
+
+    public function flightBooking()
+    {
+        return view('admin.flight-booking');
+    }
+
+    public function roomDetail()
+    {
+        return view('admin.room-detail');
+    }
+
+    public function roomBooking()
+    {
+        return view('admin.room-booking');
     }
 }
