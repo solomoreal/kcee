@@ -42,20 +42,21 @@
     </a>
   </li>
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#users" aria-expanded="true" aria-controls="collapseTable">
-        <i class="fas fa-fw fa-users"></i>
-        <span>Admin Management</span>
-    </a>
-    <div id="users" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Admins</h6>
-            <a class="collapse-item" href="{{route('admin.add')}}">Register Admins</a>
-            <a class="collapse-item" href="{{route('admin.permissions')}}">Admin Permissions</a>
-        </div>
-    </div>
-</li>
+
 <hr class="sidebar-divider">
+<li class="nav-item">
+    <a class="nav-link" href="{{route('admin.add')}}">
+        <i class="fas fa-fw fa-users"></i>
+      <span>Register Admins</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{{route('admin.permissions')}}">
+        <i class="fas fa-fw fa-users"></i>
+      <span>Admin Permissions</span>
+    </a>
+</li>
+<hr>
 <li class="nav-item">
     <a class="nav-link" href="{{route('admin.manage-flight')}}">
         <i class='fas fa-ticket-alt'></i>

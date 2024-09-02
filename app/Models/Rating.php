@@ -12,10 +12,16 @@ class Rating extends Model
     protected $fillable = [
         'package_id',
         'rating',
+        'user_id',
     ];
 
     public function tourPackage()
     {
         return $this->belongsTo(TourPackage::class, 'package_id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
